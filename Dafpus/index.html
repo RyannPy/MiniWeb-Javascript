@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Daftar Pustaka Generator</title>
+        <style>
+            .step {
+                display: none;
+            }
+            .active {
+                display: block;
+            }
+        </style>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="judul">📚 Daftar Pustaka Generator</h1>
+
+            <!-- Step 1: Pilih Jenis Sumber -->
+            <div id="step-1" class="step active">
+                <h2>Pilih jenis sumber</h2>
+                <div class="btn-group">
+                    <button onclick="pilihJenis('website')">Website</button>
+                    <button onclick="pilihJenis('jurnal')">Jurnal</button>
+                    <button onclick="pilihJenis('buku')">Buku</button>
+                </div>
+            </div>
+            <!-- dst... -->
+        </div>
+        <!-- Step 2: Jumlah Penulis (umum untuk semua sumber) -->
+        <div id="step-penulis" class="step">
+            <h2>Jumlah penulis</h2>
+            <button onclick="pilihJumlahPenulis('1')">1 Penulis</button>
+            <button onclick="pilihJumlahPenulis('2')">2 Penulis</button>
+            <button onclick="pilihJumlahPenulis('lebih')">
+                Lebih dari 2 Penulis
+            </button>
+        </div>
+
+        <!-- Step 3: Input Nama Penulis -->
+        <div id="form-penulis-1" class="step">
+            <h2>Penulis (1 Orang)</h2>
+            <label>Nama Depan:</label><br />
+            <input type="text" /><br />
+            <label>Nama Belakang (opsional):</label><br />
+            <input type="text" /><br />
+            <button onclick="lanjutSetelahPenulis()">Lanjut</button>
+        </div>
+
+        <div id="form-penulis-2" class="step">
+            <h2>Penulis (2 Orang)</h2>
+            <label>Penulis 1 - Nama Depan:</label><br />
+            <input type="text" /><br />
+            <label>Penulis 1 - Nama Belakang (opsional):</label><br />
+            <input type="text" /><br /><br />
+
+            <label>Penulis 2 - Nama Lengkap:</label><br />
+            <input type="text" /><br />
+            <button onclick="lanjutSetelahPenulis()">Lanjut</button>
+        </div>
+
+        <div id="form-penulis-lebih" class="step">
+            <h2>Penulis (Lebih dari 2 Orang)</h2>
+            <label>Penulis 1 - Nama Depan:</label><br />
+            <input type="text" /><br />
+            <label>Penulis 1 - Nama Belakang (opsional):</label><br />
+            <input type="text" /><br />
+            <p><i>Penulis lainnya akan disingkat sebagai "dkk."</i></p>
+            <button onclick="lanjutSetelahPenulis()">Lanjut</button>
+        </div>
+
+        <!-- Step 4: Form Website -->
+        <div id="form-website" class="step">
+            <h2>Form Website</h2>
+            <label>Tahun Publikasi:</label><br />
+            <input type="text" /><br />
+            <label>Judul Artikel:</label><br />
+            <input type="text" /><br />
+            <label>URL (Link Website):</label><br />
+            <input type="text" /><br />
+            <label>Tanggal Akses (contoh: 12 Januari 2025):</label><br />
+            <input type="text" /><br />
+            <label>Waktu Akses (contoh: 18.35):</label><br />
+            <input type="text" /><br />
+        </div>
+
+        <!-- Step 4: Form Jurnal -->
+        <div id="form-jurnal" class="step">
+            <h2>Form Jurnal</h2>
+            <label>Tahun Publikasi:</label><br />
+            <input type="text" /><br />
+            <label>Judul Artikel Jurnal:</label><br />
+            <input type="text" /><br />
+            <label>Nama Jurnal:</label><br />
+            <input type="text" /><br />
+            <label>Volume:</label><br />
+            <input type="text" /><br />
+            <label>Nomor:</label><br />
+            <input type="text" /><br />
+            <label>Halaman:</label><br />
+            <input type="text" /><br />
+        </div>
+
+        <!-- Step 4: Form Buku -->
+        <div id="form-buku" class="step">
+            <h2>Form Buku</h2>
+            <label>Tahun Terbit:</label><br />
+            <input type="text" /><br />
+            <label>Judul Buku:</label><br />
+            <input type="text" /><br />
+            <label>Kota Terbit:</label><br />
+            <input type="text" /><br />
+            <label>Penerbit:</label><br />
+            <input type="text" /><br />
+        </div>
+        <hr />
+        <h2>Hasil Daftar Pustaka:</h2>
+        <p id="output"></p>
+        <button onclick="generateOutput()">Selesaikan & Lihat Hasil</button>
+        <script src="script.js"></script>
+    </body>
+</html>
