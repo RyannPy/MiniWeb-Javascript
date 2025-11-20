@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Nao Website</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <!-- Buka body dulu -->
+        <header class="headerallpage">
+            <h3 class="headertext">Konversi Panjang</h3>
+        </header>
+
+        <div class="container">
+            <div class="konversi">
+                <h3>Masukkan Panjang dan Jenisnya!</h3>
+                <input
+                    type="number"
+                    name="panjangInput"
+                    id="panjangInput"
+                    placeholder="Panjang Pertama"
+                /><br />
+                <select
+                    name="jenisPanjangInput"
+                    id="jenisPanjangInput"
+                    class="jenisPanjangInput"
+                >
+                    <option value="None">Jenis Panjang</option>
+                    <option value="Km">Kilometer</option>
+                    <option value="Hm">Hektometer</option>
+                    <option value="Dam">Dekameter</option>
+                    <option value="M">Meter</option>
+                    <option value="Dm">Desimeter</option>
+                    <option value="Cm">Centimeter</option>
+                    <option value="Mm">Milimeter</option>
+                </select>
+
+                <h3>Mau diubah jadi apa?</h3>
+
+                <select
+                    name="jenisPanjangOutput"
+                    id="jenisPanjangOutput"
+                    class="jenisPanjangOutput"
+                >
+                    <
+                    <option value="None">Jenis Panjang</option>
+                    <option value="Km">Kilometer</option>
+                    <option value="Hm">Hektometer</option>
+                    <option value="Dam">Dekameter</option>
+                    <option value="M">Meter</option>
+                    <option value="Dm">Desimeter</option>
+                    <option value="Cm">Centimeter</option>
+                    <option value="Mm">Milimeter</option>
+                </select>
+
+                <button type="submit" id="button">Konversi</button>
+                <h3>Hasil Konversi :</h3>
+                <h3 id="output"></h3>
+            </div>
+
+            <script src="script.js"></script>
+        </div>
+    </body>
+</html>
