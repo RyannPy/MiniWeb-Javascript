@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Ubuntu";
+    background-image: url("assets/backgroundWeb.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.title {
+    display: flex;
+    color: #ffffff;
+    align-items: center;
+    font-family: "Ubuntu", serif;
+    font-weight: 700;
+}
+.logo {
+    height: 30px;
+    margin-right: 10px;
+}
+/* STYLE NAVBAR */
+.navbar {
+    justify-content: space-between;
+    height: 50px;
+    padding: 0 15px;
+    position: sticky;
+    z-index: 100; /*neng duwor secara lapisan*/
+}
+nav {
+    background-color: #2e1a47;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+/* STYLE TOMBOL NAVBAR ☰ X Buka Tutup */
+.menuToggle {
+    font-size: 24px;
+    color: #ffffff;
+    cursor: pointer;
+    display: none;
+    padding: 4px;
+}
+.closeToggle {
+    font-size: 24px;
+    color: #ffffff;
+    padding: 3px;
+    cursor: pointer;
+    position: absolute;
+    top: 45px;
+    right: 30px;
+    display: none;
+}
+
+/* STYLE MENU */
+
+.titleNavbar {
+    font-family: "Ubuntu", serif;
+    font-weight: 700;
+    padding-left: 10px; /*ben pas*/
+    padding-bottom: 5px;
+    color: #ffffff;
+}
+.navLink {
+    list-style: none;
+    display: flex;
+    height: 100vh;
+    justify-content: flex-start;
+    padding-left: 15px;
+}
+.navLink ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.navLink a {
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    border-radius: 6px;
+}
+.navLink li {
+    margin: 0 15px;
+    display: flex;
+}
+
+.icon {
+    height: 20px;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+/* LAYAR HP */
+@media (max-width: 768px) {
+    .menuToggle {
+        display: block;
+    }
+    .closeToggle {
+        display: block;
+    }
+    .navLink {
+        position: fixed;
+        top: 0px;
+        left: -250px;
+        width: 250px;
+        height: 100vh;
+        background: #2e1a47;
+        flex-direction: column;
+        display: flex;
+        justify-content: flex-start;
+        padding: 50px 15px 0 15px;
+        transition: 0.3s;
+    }
+    .navLink li {
+        width: 100%;
+    }
+    .navLink a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 18px;
+        text-align: left;
+    }
+    .navLink.active {
+        left: 0;
+    }
+}
+
+/* BERUBAH WARNA KETIKA HOVER */
+.menuToggle:hover {
+    border: 1px solid #a67c00;
+    border-radius: 3px;
+    color: #a67c00;
+}
+.closeToggle:hover {
+    border: 1px solid #a67c00;
+    border-radius: 3px;
+    color: #a67c00;
+}
+
+a:hover {
+    background-color: #a67c00;
+    color: #2e1a47; /*link e bolo*/
+}
+
+/* CONTAINER ATAU FORMAT ISI WEB */
+.container {
+    margin: 30px 10px 10px 10px;
+    
+}
+.judulPage {
+    font-family: "Ubuntu", serif;
+    color: white;
+}
+.keteranganPage {
+    font-family: "Ubuntu", serif;
+    color: white;
+}
+/* MENU TOPUP */
+.menuTopup {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+    max-width: 800px;
+}
+.menuTopupLink {
+    margin-top: 10px;
+    height: 150px; /*tingginya segini apa seberapa?*/
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: flex-end; /*teks kiri bawah*/
+    position: relative;
+}
+.menuTopupLink a {
+    text-decoration: none;
+    width: 100%; /*full di box*/
+    height: 100%;
+    padding: 10px;
+    margin: 0;
+    bottom: 0; /*pas di box*/
+    left: 0;
+    display: flex; /*teks kiri bawah*/
+    align-items: flex-end;
+    background: linear-gradient(
+        to top,
+        rgba(46, 26, 71, 1) 0%,
+        rgba(46, 26, 71, 0.5) 50%,
+        rgba(46, 26, 71, 0) 100%
+    );
+    position: absolute;
+    opacity: 0; /* gak ada sebelum hover (background) */
+
+    transition: opacity 0.3s ease;
+}
+.menuTopupLink span {
+    display: block;
+    color: white;
+    opacity: 0;
+    transform: translateY(20px); /* animasi geser dulu gak sih (teks)*/
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* HOVERNYA COY, BG SAMA TEKS */
+.menuTopupLink:hover a {
+    opacity: 1; /* abis hover ada background muncul secara opacity */
+}
+.menuTopupLink:hover span {
+ opacity: 1;
+ transform: translateY(0);
+}
+
+/* ICON GAME */ /*gambar semua bjier*/
+#MLBB {
+    background-image: url("assets/MLBBPict.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#FF {
+    background-image: url("assets/FFPict.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#PUBGM {
+    background-image: url("assets/PUBGMPict.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#Genshin {
+    background-image: url("assets/GenshinPict.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#HSR {
+    background-image: url("assets/HSRPict.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#Wuwa {
+    background-image: url("assets/WuwaPict.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#PES {
+    background-image: url("assets/PESPict.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#HOK {
+    background-image: url("assets/HOKPict.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#LOL {
+    background-image: url("assets/LOLPict.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* MENU ARTIKEL */
+.menuArtikel {
+}
