@@ -1,0 +1,52 @@
+/* Untuk hilangkan highlight biru pada perangkat sentuh */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Reset dan pengaturan dasar body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Kontainer utama untuk cerita */
+#story-container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer; /* Menunjukkan bahwa bisa diklik */
+}
+
+/* Pengaturan teks cerita */
+#story-text {
+    font-size: 22px;
+    line-height: 1.6;
+    text-align: left; /* Teks rata kiri supaya lebih nyaman dibaca */
+    margin: 0;
+    white-space: normal; /* Pastikan teks bisa wrap jika panjang */
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    word-wrap: break-word; /* Menjaga teks agar tidak melampaui lebar layar */
+    word-break: break-word; /* Memastikan kata panjang tidak terpotong secara aneh */
+
+}
+
+/* Tambahan untuk styling ketika selesai tampil */
+#story-text.loaded {
+    opacity: 1;
+    transform: translateX(0);
+}
