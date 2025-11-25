@@ -1,0 +1,311 @@
+* {
+    box-sizing: border-box;
+}
+
+/*Style body*/
+html,
+body {
+    background-image: url("assets/images/BackgroundIndexHtml.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    box-sizing: border-box;
+}
+.headerallpage {
+    color: white;
+    font-family: "Ubuntu", serif;
+    font-weight: 300;
+    padding: 5px;
+}
+.headertext {
+    text-align: right;
+    margin: 10px 10px 0 0;
+}
+
+/* Footer */
+.footerpage {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    width: 100%;
+    margin: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.bagianquotes {
+    padding: 0;
+}
+.quotes {
+    font-family: "Ubuntu", serif;
+    font-weight: 400;
+}
+.tokohquotes {
+    font-family: "Montserrat";
+    font-size: 13px;
+}
+.copyright {
+    font-family: "Montserrat";
+    font-size: 5px;
+}
+
+.footer-content a {
+    color: #4caf50;
+    text-decoration: none;
+    margin: 0 5px;
+    align-items: center;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+/* Style sidebar */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+}
+
+/* Sidebar */
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    font-family: "Ubuntu", serif;
+    font-weight: 300;
+    font-style: normal;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    transition: 0.3s;
+    color: white;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+/* Close button */
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Page content */
+#main {
+    transition: margin-left 0.3s;
+    padding: 16px;
+}
+
+/* Open button */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+}
+
+a {
+    display: inline-block;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/*HEADERNYA ATAU JUDUL PAGE*/
+
+.headerpage {
+    margin: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+.teksheader {
+    display: flex;
+    flex-direction: column;
+}
+.titlepage {
+    font-family: "Ubuntu", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+}
+.deskripsipage {
+    font-family: "Montserrat";
+    color: white;
+}
+.gambarprofil {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+/*MAINPAGE UTAMA*/
+.mainpagehome {
+    align-items: center;
+    text-align: center;
+}
+.keteranganpage {
+    font-family: "Montserrat";
+    color: white;
+    margin: 10px;
+    border-top: 1px white solid;
+    border-bottom: 1px white solid;
+    padding: 8px;
+}
+
+/* KONTEN PAGE, MENU MILIH KONTEN */
+.konten-page-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    border-radius: 8px;
+}
+.konten-page {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+.isikonten-page {
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+.gambarkonten-page {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+    margin: 15px;
+}
+.tekskonten-page {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+.titlekonten-page {
+    font-family: "Ubuntu", serif;
+    font-weight: 500;
+    font-style: normal;
+    color: white;
+    margin-bottom: 10px;
+    padding: 0;
+    display: inline-flex;
+}
+.deskripsikonten-page {
+    font-family: "Montserrat";
+    color: white;
+    margin: 0;
+}
+.tanggalkonten-page {
+    font-family: "Montserrat";
+    color: white;
+    font-size: 12px;
+    font-style: italic;
+    margin-top: 8px;
+}
+
+/* JUDUL HEADER KONTEN */
+.headerpage-konten {
+    margin: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+.teksheader-konten {
+    display: flex;
+    flex-direction: column;
+}
+.titlepage-konten {
+    font-family: "Ubuntu", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+    margin-bottom: 0;
+}
+.deskripsipage-konten {
+    font-family: "Montserrat";
+    color: white;
+    margin-bottom: 0;
+}
+
+.tanggalpage-konten {
+    color: white;
+    font-family: "Montserrat";
+    font-style: italic;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+/* ISI PAGE */
+.isipage {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+}
+.teks-artikel {
+    color: white;
+    font-family: "Montserrat";
+    font-size: 12px;
+    text-indent: 10px;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* DAFTAR ISI */
+.daftarisi {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 0 10px 0;
+    border-radius: 8px;
+    margin: 0px 5px;
+}
+.judul-daftarisi {
+    font-family: "Ubuntu", serif;
+    font-weight: 300;
+    font-style: normal;
+    margin: 5px 5px 5px 15px;
+}
+.submenu-daftarisi {
+    font-family: "Montserrat";
+    margin-left: 15px;
+    margin-bottom: 0;
+}
+.pilihan-daftarisi {
+    font-family: "Montserrat";
+    display: column;
+}
+.main-daftarisi {
+    list-style-type: none;
+    margin: 0;
+}
+.main-daftarisi a {
+    text-decoration: none;
+    font-family: "Montserrat";
+    padding: 3px;
+    margin: 0;
+    color: white;
+    border-radius: 3px;
+}
